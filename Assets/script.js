@@ -34,13 +34,15 @@ const options = {
 	}
 };
 
-try {
-	const response = await fetch(url, options);
-	const result = await response.json();
-	console.log(result);
-} catch (error) {
-	console.error(error);
-}
-}
-searchRestaurantStateCity("Miami", "FL")
-getOpenWeather("Chicago")
+getOpenWeather("Miami")
+
+const data = null;
+
+const xhr = new XMLHttpRequest();
+xhr.withCredentials = true;
+
+xhr.addEventListener('readystatechange', function () {
+	if (this.readyState === this.DONE) {
+		console.log(this.responseText);
+	}
+});

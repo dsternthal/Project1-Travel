@@ -2,9 +2,20 @@
  * Always set the map height explicitly to define the size of the div element
  * that contains the map. 
  */
+
+ :root{
+  --Cerulean: #227c9d; 
+  --LightSeaGreen: #17c3b2;
+  --Sunset: #ffcb77;
+  --FloralWhite: #fef9ef;
+  --LightRed: #fe6d73;
+
+
+ }
+
  #map {
-    height: 20%;
-    width: 20%;
+    height: 500px;
+    width: 500px;
   }
   
   /* 
