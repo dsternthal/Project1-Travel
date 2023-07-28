@@ -46,3 +46,20 @@ xhr.addEventListener('readystatechange', function () {
 		console.log(this.responseText);
 	}
 });
+
+const url = 'https://the-fork-the-spoon.p.rapidapi.com/restaurants/v2/auto-complete?text=basara%20sushi';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'ff27872189msh4ec125b3b4946c2p10f900jsnd9403e0ba202',
+		'X-RapidAPI-Host': 'the-fork-the-spoon.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
