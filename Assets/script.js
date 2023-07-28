@@ -24,5 +24,23 @@ async function initMap(lat,long) {
     zoom: 8,
   });
 }
+async function searchRestaurantStateCity(city, state){
+  const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/'+state+'/city/'+city+'/0';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'a3c09dadd3msh4ef8722c154f5fep1987a4jsn4db64d562c6f',
+		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+	}
+};
 
+try {
+	const response = await fetch(url, options);
+	const result = await response.json();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+}
+searchRestaurantStateCity("Miami", "FL")
 getOpenWeather("Chicago")
