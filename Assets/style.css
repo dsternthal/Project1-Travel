@@ -3,19 +3,30 @@
  * that contains the map. 
  */
 
+
  :root{
   --Cerulean: #227c9d; 
   --LightSeaGreen: #17c3b2;
   --Sunset: #ffcb77;
   --FloralWhite: #fef9ef;
   --LightRed: #fe6d73;
-
-
  }
 
+ /* stretched the width of the navbar to 100 */
 .navbar{
   background-color: var(--Cerulean);
+  width: 100% 
+
 }
+
+/* created id to edit the content in the nav bar */
+.uk-subnav {justify-content: right;
+}
+
+/* created this id for the business name */
+#name {justify-content: left;
+}
+
  #map {
     height: 500px;
     width: 500px;
@@ -30,3 +41,4 @@
     margin: 0;
     padding: 0;
   }
+
