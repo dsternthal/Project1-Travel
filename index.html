@@ -11,15 +11,25 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit-icons.min.js"></script>
 
+    <!-- Fonts used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Oooh+Baby&display=swap" rel="stylesheet">
+
     <title>Travel Site</title>
     <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
 </head>
 
+<figure></figure>
+
 <body>
-    <header class = "uk-flex">
+    <header class="uk-flex">
+
         <nav uk-dropnav class="navbar">
-            <ul class="uk-subnav">
-                <li class="uk-active"><a href="#">SoFloFood</a></li>
+           
+            <ul class="uk-subnav"> 
+                <h1 id="name">SoFlo Food</h1>
+                <li class="uk-active"><a href="#"> Home</a></li>
                 <li>
                     <a href="#">Cuisine<span uk-drop-parent-icon></span></a>
                     <div class="uk-dropdown">
@@ -44,17 +54,22 @@
                     </div>
                 </li>
                 <li><a href="#">Item</a></li>
-                <li><form class="uk-search uk-search-default pos: top-right">
-                    <a href="" uk-search-icon></a>
-                    <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            </li>
+                <li>
+                    <form class="uk-search uk-search-default pos: top-right">
+                        <a href="" uk-search-icon></a>
+                        <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
             </ul>
-            </nav>
+        </nav>
     </header>
-    <p>
-        Find the yummiest food in your vacation spot with SoFlo Foods
-    </p>
+    <section>
+        <p>
+            Find the yummiest food in your vacation spot with SoFlo Foods
+        </p>
+
+    </section>
+
     <!-- <div class="uk-column-1-2 uk-column-divider">
         <p>Come to miami, we have the food in all the land.</p>
 
