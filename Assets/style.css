@@ -1,0 +1,65 @@
+/* 
+ * Always set the map height explicitly to define the size of the div element
+ * that contains the map. 
+ */
+
+
+:root {
+  --Cerulean: #227c9d;
+  --LightSeaGreen: #17c3b2;
+  --Sunset: #ffcb77;
+  --FloralWhite: #fef9ef;
+  --LightRed: #fe6d73;
+}
+
+
+figure {
+  background-image: url(../Assets/images/building-row.jpeg); alt: "clip art image of art deco buildings"; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  box-shadow: 5px 10px 10px black;
+  opacity: 0.6;
+
+}
+
+
+/* stretched the width of the navbar to 100 */
+.navbar {
+  background-color: var(--Cerulean);
+  width: 100%
+}
+
+/* created id to edit the content in the nav bar */
+.uk-subnav {
+  /* justify-content: right; */
+  width: 100%;
+
+}
+
+/* created this id for the business name */
+#name {
+  justify-content: left;
+  width: 50%;
+  font-family: 'Limelight', cursive;;
+  font-size: 70px;
+  color: #fef9ef;
+  text-shadow: 2px 2px 4px;
+  padding-left: 2%;
+
+}
+
+#map {
+  height: 500px;
+  width: 500px;
+}
+
+/* 
+   * Optional: Makes the sample page fill the window. 
+   */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
