@@ -1,5 +1,11 @@
 let map;
+var cityName = document.querySelector(".uk-search-input")
 
+function(){
+searchRestaurantStateCity(cityName.value)
+}
+
+console.log(cityName.value)
 function getOpenWeather(cityName) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
   var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey
