@@ -1,10 +1,10 @@
 let map;
 var cityName = document.querySelector(".uk-search-input")
 
-function search(event){
+function search(event) {
   event.preventDefault()
-searchRestaurantStateCity(cityName.value)
-cityName=cityName.value
+  searchRestaurantStateCity(cityName.value)
+  cityName = cityName.value
 }
 
 console.log(cityName.value)
@@ -32,27 +32,48 @@ async function initMap(lat, long) {
     zoom: 8,
   });
 }
-async function searchRestaurantStateCity(city, state) {
-  const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/' + state + '/city/' + city + '/0';
-  const options = {
-    method: 'GET',
-    headers: {
-      'X-RapidAPI-Key': 'a3c09dadd3msh4ef8722c154f5fep1987a4jsn4db64d562c6f',
-      'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    }
-  };
 
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
+//Dani's API
+// const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/MI/city/West%20Bloomfield/0';
+// const options = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': 'ff27872189msh4ec125b3b4946c2p10f900jsnd9403e0ba202',
+// 		'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+// 	}
+// };
 
-searchRestaurantStateCity(cityName, "FL")
-getOpenWeather(cityName)
+// try {
+// 	const response = await fetch(url, options);
+// 	const result = await response.json();
+// 	console.log(result);
+// } catch (error) {
+// 	console.error(error);
+// }
 
-addEventListener("click",search)
+
+//Lina's API version
+// async function searchRestaurantStateCity(city, state) {
+//   const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/' + state + '/city/' + city + '/0';
+//   const options = {
+//     method: 'GET',
+//     headers: {
+//       'X-RapidAPI-Key': 'a3c09dadd3msh4ef8722c154f5fep1987a4jsn4db64d562c6f',
+//       'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+//     }
+//   };
+
+//   try {
+//     const response = await fetch(url, options);
+//     const result = await response.json();
+//     console.log(result);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
+
+searchRestaurantStateCity("Miami", "FL")
+getOpenWeather("Miami")
+
+addEventListener("click", search)
 
