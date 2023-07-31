@@ -1,8 +1,10 @@
 let map;
 var cityName = document.querySelector(".uk-search-input")
 
-function(){
+function search(event){
+  event.preventDefault()
 searchRestaurantStateCity(cityName.value)
+cityName=cityName.value
 }
 
 console.log(cityName.value)
@@ -48,5 +50,9 @@ async function searchRestaurantStateCity(city, state) {
     console.error(error);
   }
 }
-searchRestaurantStateCity("Miami", "FL")
-getOpenWeather("Miami")
+
+searchRestaurantStateCity(cityName, "FL")
+getOpenWeather(cityName)
+
+addEventListener("click",search)
+
