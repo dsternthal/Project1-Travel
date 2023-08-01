@@ -11,15 +11,25 @@
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit-icons.min.js"></script>
 
+    <!-- Fonts used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Oooh+Baby&display=swap" rel="stylesheet">
+
     <title>Travel Site</title>
     <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
 </head>
 
+<figure></figure>
+
 <body>
-    <header class = "uk-flex">
+    <header class="uk-flex">
+
         <nav uk-dropnav class="navbar">
-            <ul class="uk-subnav">
-                <li class="uk-active"><a href="#">SoFloFood</a></li>
+           
+            <ul class="uk-subnav"> 
+                <h1 id="name">SoFlo Food</h1>
+                <li class="uk-active"><a href="#"> Home</a></li>
                 <li>
                     <a href="#">Cuisine<span uk-drop-parent-icon></span></a>
                     <div class="uk-dropdown">
@@ -44,17 +54,77 @@
                     </div>
                 </li>
                 <li><a href="#">Item</a></li>
-                <li><form class="uk-search uk-search-default pos: top-right">
-                    <a href="" uk-search-icon></a>
-                    <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
-            </form>
-            </li>
+                <li>
+                    <form class="uk-search uk-search-default pos: top-right">
+                        <div href="" uk-search-icon></div>
+                        <input class="uk-search-input" value="" type="text" placeholder="Miami" aria-label="Search">
+                        <select name="states" id="states">
+                            <option value="AL,811">Alabama</option>
+                            <option value = "AK">Alaska</option>
+                            <!-- <li>Arizona</li>
+                            <li>Arkansas</li>
+                            <li>California</li>
+                            <li>Coloroda</li>
+                            <li>Connecticut</li>
+                            <li>Delware</li>
+                            <li>DC</li>
+                            <li>Florida</li>
+                            <li>Georgia</li>
+                            <li>Hawaii</li>
+                            <li>Idaho</li>
+                            <li>Illinois</li>
+                            <li>Indiana</li>
+                            <li>Iowa</li>
+                            <li>Kansas</li>
+                            <li>Kentucky</li>
+                            <li>Louisiana</li>
+                            <li>Maine</li>
+                            <li>Massachusetts</li>
+                            <li>Michigan</li>
+                            <li>Minnesota</li>
+                            <li>Montana</li>
+                            <li>Nebraska</li>
+                            <li>Nevada</li>
+                            <li>New Hampshire</li>
+                            <li>New Jersey</li>
+                            <li>New Mexico</li>
+                            <li>New York</li>
+                            <li>North Carolina</li>
+                            <li>North Dakota</li>
+                            <li>Ohio</li>
+                            <li>Oklahoma</li>
+                            <li>Oregon</li>
+                            <li>Pennsylvania</li>
+                            <li>Rhode Island</li>
+                            <li>South Carolina</li>
+                            <li>South Dakota</li>
+                            <li>Tennessee</li>
+                            <li>Texas</li>
+                            <li>Utah</li>
+                            <li>Vermont</li>
+                            <li>Virginia</li>
+                            <li>Washington</li>
+                            <li>West Virginia</li>
+                            <li>Wisconsin</li>
+                            <li>Wyoming</li> -->
+                        </select> 
+                        <div class="data-uk-dropdown">
+                               
+                            </div>
+                            <button class="searchButton">Search</button>
+                        </div>
+                    </form>
+                </li>
             </ul>
-            </nav>
+        </nav>
     </header>
-    <p>
-        Find the yummiest food in your vacation spot with SoFlo Foods
-    </p>
+    <section>
+        <p>
+            Find the yummiest food in your vacation spot with SoFlo Foods
+        </p>
+
+    </section>
+
     <!-- <div class="uk-column-1-2 uk-column-divider">
         <p>Come to miami, we have the food in all the land.</p>
 
@@ -73,6 +143,7 @@
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
             ({ key: "AIzaSyATcRbM9Vy7XbUsu5UpUGTk0uy8IHsrsKE", v: "weekly" });</script>
     <script type="module" src="./Assets/script.js"></script>
+
 </body>
 
 </html>
