@@ -5,7 +5,7 @@ var stateEl = document.querySelector("#states")
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
-  var URL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + ","+ state +"&appid=" + apiKey
+  var URL = "http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + ","+ state +"&appid=" + apiKey
   console.log(URL)
   fetch(URL)
     .then(function (response) {
@@ -13,8 +13,8 @@ function getOpenWeather(cityName, state) {
     })
     .then(function (data) {
       console.log(data)
-      var lat = data.coord.lat
-      var long = data.coord.lon
+      var lat = data[0].lat
+      var long = data[0].lon
       initMap(lat, long)
     })
 }
