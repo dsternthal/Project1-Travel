@@ -43,4 +43,4 @@ try {
 }
 }
 searchRestaurantStateCity("Miami", "FL")
-getOpenWeather("Chicago")
+getOpenWeather("Miami")
