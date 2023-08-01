@@ -63,3 +63,6 @@ try {
 } catch (error) {
 	console.error(error);
 }
+}
+searchRestaurantStateCity("Miami", "FL")
+getOpenWeather("Miami")
