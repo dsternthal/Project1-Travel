@@ -17,18 +17,23 @@ This site may now be accessed with all its updated features by visiting the hype
 <!-- Insert Deployed Link Here -->
 
 The page will welcome you with the following image:
-<!-- <img src="." alt="README screenshot"> -->
+<img src="./Assets/images/Homepage-Screenshot.png" alt="homepage-screenshot">
 
 ## Credits
 
 An essential component of successfully completing this assignment, was the ability to build and work with a team. We would like to attribute the success of meeting this project's acceptance criteria to the contributions of Group 11 team members: Danielle Sternthal, Lina Quintana, Kayleigh Fitzgerald Gazzolo, and Annielys Sosa.
  
-To supplement the design of the application, the following sites were utilized:
+To supplement the design of the application, the following sites and technologies were utilized:
 -Canva.com  
--Google Fonts for unique fonts.
--W3 Schools for CSS notes.
--MDN Web Docs for CSS notes.
-<!-- -Insert APIs -->
+-Google Fonts for unique fonts
+-W3 Schools for CSS notes
+-MDN Web Docs for CSS notes
+-GetUIKit.com
+
+-RapidAPI 
+Google Maps
+OpenWeather Geocoding
+Restaurants Near Me
 
 ## License
 
