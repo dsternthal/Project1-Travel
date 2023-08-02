@@ -48,24 +48,25 @@ async function initMap(lat, long) {
 
 
 //Lina's API version
-async function searchRestaurantStateCity(city, state) {
-  const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/' + state + '/city/' + city + '/0';
-  const options = {
-    method: 'GET',
-    headers: {
-     'X-RapidAPI-Key': 'ff27872189msh4ec125b3b4946c2p10f900jsnd9403e0ba202',
-    'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
-    }
-  };
 
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log(result);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// async function searchRestaurantStateCity(city, state) {
+//   const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/' + state + '/city/' + city + '/0';
+//   const options = {
+//     method: 'GET',
+//     headers: {
+//      'X-RapidAPI-Key': 'ff27872189msh4ec125b3b4946c2p10f900jsnd9403e0ba202',
+//     'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+//     }
+//   };
+
+//   try {
+//     const response = await fetch(url, options);
+//     const result = await response.json();
+//     console.log(result);
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
 
 
