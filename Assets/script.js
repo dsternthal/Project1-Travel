@@ -54,8 +54,8 @@ async function searchRestaurantStateCity(city, state) {
   const options = {
     method: 'GET',
     headers: {
-     'X-RapidAPI-Key': 'ff27872189msh4ec125b3b4946c2p10f900jsnd9403e0ba202',
-    'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+      'X-RapidAPI-Key': '64741dc238msh07ee6473be5b210p16ddbajsn1ca94d169902',
+      'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     }
   };
 
@@ -75,7 +75,7 @@ async function restaurantName(){
     console.log(searchRestaurants.restaurants[i].restaurantName)
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
-    var resDesc = document.getElementById("d"+i)
+    var resDesc = document.getElementById("d" + i)
     resDesc.textContent = cuisineType
   }
 }
