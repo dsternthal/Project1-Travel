@@ -62,17 +62,29 @@ async function searchRestaurantStateCity(city, state) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
+    return result;
   } catch (error) {
     console.error(error);
   }
 }
-
+async function restaurantName(){
+  var searchRestaurants = await searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+  for (let i = 0; i < 6; i++) {
+    var resName = searchRestaurants.restaurants[i].restaurantName
+    var cuisineType = searchRestaurants.restaurants[i].cuisineType
+    console.log(searchRestaurants.restaurants[i].restaurantName)
+    var cardEl = document.getElementById("R" + i)
+    cardEl.textContent = resName
+    var resDesc = document.getElementById("d"+i)
+    resDesc.textContent = cuisineType
+  }
+}
 
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault()
 getOpenWeather(cityName.value,stateEl.value.split(",")[1]) 
-searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+restaurantName()
+// searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
 restaurantSectionEl.setAttribute("class","")
 })
