@@ -75,8 +75,8 @@ async function restaurantName(){
     console.log(searchRestaurants.restaurants[i].restaurantName)
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
-    var resDesc = document.getElementById("d"+i)
-    resDesc.textContent = cuiseineType
+    var resDesc = document.getElementById("d" + i)
+    resDesc.textContent = cuisineType
   }
 }
 
