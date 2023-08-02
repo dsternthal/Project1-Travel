@@ -2,6 +2,7 @@ let map;
 var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
+var restaurantSectionEl = document.querySelector("#restaurantSection")
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
@@ -61,16 +62,26 @@ async function searchRestaurantStateCity(city, state) {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result);
+    return result;
   } catch (error) {
     console.error(error);
   }
 }
-
+async function restaurantName(){
+  var searchRestaurants = await searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+  for (let i = 0; i < 6; i++) {
+    var resName = searchRestaurants.restaurants[i].restaurantName
+    console.log(searchRestaurants.restaurants[i].restaurantName)
+    var cardEl = document.getElementById("R" + i)
+    cardEl.textContent = resName
+  }
+}
 
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault()
 getOpenWeather(cityName.value,stateEl.value.split(",")[1]) 
-searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+restaurantName()
+// searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+restaurantSectionEl.setAttribute("class","")
 })
