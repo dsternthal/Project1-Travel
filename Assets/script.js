@@ -49,6 +49,15 @@ async function initMap(lat, long) {
 
 
 //Lina's API version
+async function searchRestaurantStateCity(city, state) {
+  const url = 'https://restaurants-near-me-usa.p.rapidapi.com/restaurants/location/state/' + state + '/city/' + city + '/0';
+  const options = {
+    method: 'GET',
+    headers: {
+      'X-RapidAPI-Key': '64741dc238msh07ee6473be5b210p16ddbajsn1ca94d169902',
+      'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
+    }
+  };
 
   try {
     const response = await fetch(url, options);
@@ -67,7 +76,7 @@ async function restaurantName(){
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
     var resDesc = document.getElementById("d"+i)
-    resDesc.textContent = cuisineType
+    resDesc.textContent = cuiseineType
   }
 }
 
