@@ -71,9 +71,12 @@ async function restaurantName(){
   var searchRestaurants = await searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
   for (let i = 0; i < 6; i++) {
     var resName = searchRestaurants.restaurants[i].restaurantName
+    var cuisineType = searchRestaurants.restaurants[i].cuisineType
     console.log(searchRestaurants.restaurants[i].restaurantName)
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
+    var resDesc = document.getElementById("d"+i)
+    resDesc.textContent = cuisineType
   }
 }
 
