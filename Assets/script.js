@@ -2,6 +2,7 @@ let map;
 var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
+var restaurantSectionEl = document.querySelector("#restaurantSection")
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
@@ -74,6 +75,7 @@ searchButton.addEventListener("click", function(event){
   event.preventDefault()
 getOpenWeather(cityName.value,stateEl.value.split(",")[1]) 
 searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+restaurantSectionEl.setAttribute("class","")
 })
 
 
