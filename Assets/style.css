@@ -12,6 +12,9 @@
   --LightRed: #fe6d73;
 }
 
+.hidden{
+display:none;
+}
 
 figure {
   background-image: url(../Assets/images/building-row.jpeg); alt: "clip art image of art deco buildings"; 
