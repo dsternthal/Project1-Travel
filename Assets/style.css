@@ -33,9 +33,9 @@ figure {
   text-shadow: 2px 2px 2px;
   text-align: center;
   padding: 20px;
-
-
 }
+
+
 
 /* stretched the width of the navbar to 100 */
 .navbar {
@@ -90,9 +90,13 @@ box-shadow: 2px 2px 5px white;
   opacity: 0.8;
 }
 
+#R1, #R2, #R3, #R4, #R5, #R6 { font-family: 'Oooh Baby', cursive;
+  background-color: #9CB9D8;
+  border-radius: 20px;
+color: white;}
 
 
-
+  
 /* created this id for the business name */
 #name {
   /* justify-content: left; */
@@ -108,7 +112,9 @@ box-shadow: 2px 2px 5px white;
 #map {
   height: 500px;
   width: 500px;
-
+  margin-top: 30px;
+  border: white solid;
+box-shadow: 2px 2px 4px;
 }
 
 
