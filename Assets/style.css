@@ -33,6 +33,7 @@ figure {
   text-shadow: 2px 2px 2px;
   text-align: center;
   padding: 20px;
+  /* display: none; */
 }
 
 
@@ -82,12 +83,29 @@ box-shadow: 2px 2px 5px white;
   margin: 25px;
 }
 
+
+
 .sharing {
   border: white solid 5px;
   box-shadow: 2px 2px 4px gray;
   padding: 20px;
   margin-top: 20px;
   opacity: 0.8;
+}
+
+.contact-title 
+   { font-family: 'Oooh Baby', cursive;
+  background-color: #9CB9D8;
+  border-radius: 20px;
+  text-align: center;
+}
+
+
+.section-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
 #R1, #R2, #R3, #R4, #R5, #R6 { font-family: 'Oooh Baby', cursive;
@@ -111,10 +129,12 @@ color: white;}
 
 #map {
   height: 500px;
-  width: 500px;
+  width: 1000px;
   margin-top: 30px;
   border: white solid;
-box-shadow: 2px 2px 4px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+
 }
 
 
