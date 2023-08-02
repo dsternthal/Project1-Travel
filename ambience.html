@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/css/uikit.min.css" />
+
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.23/dist/js/uikit-icons.min.js"></script>
+
+    <!-- Fonts used -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Oooh+Baby&display=swap" rel="stylesheet">
+
+    <title>Travel Site</title>
+    <link rel="stylesheet" type="text/css" href="./Assets/style.css" />
+</head>
+
+<figure></figure>
+
+<body>
+    <header class="uk-flex">
+
+        <nav uk-dropnav class="navbar">
+           
+            <ul class="uk-subnav"> 
+                <h1 id="name">Dine and Vibe</h1>
+                <li class="uk-active"><a href="#"> Home</a></li>
+                <li>
+                    <a href="cuisine.html">Cuisine<span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li><a href="#">Latino</a></li>
+                            <li><a href="#">Asian</a></li>
+                            <li><a href="#">Indian</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Fusion</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="ambience.html">Ambience<span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li><a href="#">Kid Friendly</a></li>
+                            <li><a href="#">Classy</a></li>
+                            <li><a href="#">Trendy</a></li>
+                            <li><a href="#">Fast Casual</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <form class="uk-search uk-search-default pos: top-right">
+                        <a href="" uk-search-icon></a>
+                        <input class="uk-search-input" type="search" placeholder="Search" aria-label="Search">
+                    </form>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h2>Ambience</h2>
+        <p>
+            What's your mood for food? Let's help you find the right vibe for your next meal in SoFlo.
+        </p>
+
+    </section>
+
+    
+    </div>
+    <!-- Open Weather API -->
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <div id="map"></div>
+
+    <!-- Google Maps API -->
+    <!-- prettier-ignore -->
+    <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
+            ({ key: "AIzaSyATcRbM9Vy7XbUsu5UpUGTk0uy8IHsrsKE", v: "weekly" });</script>
+    <script type="module" src="./Assets/script.js"></script>
+</body>
+
+</html>
