@@ -12,6 +12,9 @@
   --LightRed: #fe6d73;
 }
 
+.hidden{
+display:none;
+}
 
 figure {
   background-image: url(../Assets/images/building-row.jpeg); alt: "clip art image of art deco buildings"; 
@@ -26,7 +29,8 @@ figure {
 
 /* stretched the width of the navbar to 100 */
 .navbar {
-  background-color: var(--Cerulean);
+  /* background-color: var(--Cerulean); */
+  background-color: lightpink;
   width: 100%
 }
 
@@ -34,8 +38,15 @@ figure {
 .uk-subnav {
   /* justify-content: right; */
   width: 100%;
-
 }
+
+.card {
+  width: 45%;
+  position: relative;
+  margin-top: 20px;}
+
+
+
 
 /* created this id for the business name */
 #name {
@@ -53,6 +64,7 @@ figure {
   height: 500px;
   width: 500px;
 }
+
 
 /* 
    * Optional: Makes the sample page fill the window. 
