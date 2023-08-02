@@ -16,7 +16,7 @@
 figure {
   background-image: url(../Assets/images/building-row.jpeg); alt: "clip art image of art deco buildings"; 
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   height: 200px;
   box-shadow: 5px 10px 10px black;
   opacity: 0.6;
@@ -56,6 +56,16 @@ figure {
   padding-left: 2%;
 
 }
+
+.homequote {
+font-size: 50px;
+font-family:'Oooh Baby', cursive;;
+font-style: bold;
+line-height: 50px
+
+
+
+ }
 
 #map {
   height: 500px;
