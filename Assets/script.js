@@ -3,6 +3,29 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
+<<<<<<< HEAD
+=======
+// var recentListEl = document.querySelector(".recentList")
+// var inputSubmit = document.getElementById("submit")
+
+// var recentSearch = []
+
+
+// inputSubmit.addEventListener("submit", function(event){
+// event.preventDefault();
+
+// recentSearch.unshift(cityName.value)
+// console.log(recentSearch)
+
+// var recentHtmlList = ""
+
+// for (let i = 0; i < recentSearch.length; i++) {
+//   recentHtmlList += recentSearch[i]
+// }
+
+// recentListEl.innerHTML = recentHtmlList
+// })
+>>>>>>> e34a56fe3a447e57e897da248b25630e0842fb27
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
@@ -69,6 +92,7 @@ async function searchRestaurantStateCity(city, state) {
 }
 async function restaurantName(){
   var searchRestaurants = await searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+  console.log(searchRestaurants)
   for (let i = 0; i < 6; i++) {
     var resName = searchRestaurants.restaurants[i].restaurantName
     var cuisineType = searchRestaurants.restaurants[i].cuisineType
@@ -77,6 +101,9 @@ async function restaurantName(){
     cardEl.textContent = resName
     var resDesc = document.getElementById("d" + i)
     resDesc.textContent = cuisineType
+  // resDesc.link= searchRestaurants.restaurants[i].website
+  document.getElementById("L" +i).href= searchRestaurants.restaurants[i].website
+
   }
 }
 
@@ -84,8 +111,7 @@ async function restaurantName(){
 searchButton.addEventListener("click", function(event){
   event.preventDefault()
 getOpenWeather(cityName.value,stateEl.value.split(",")[1]) 
-searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+restaurantName()
+// searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
 restaurantSectionEl.setAttribute("class","")
 })
-
-
