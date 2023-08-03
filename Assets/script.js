@@ -74,7 +74,7 @@ async function searchRestaurantStateCity(city, state) {
   const options = {
     method: 'GET',
     headers: {
-      'X-RapidAPI-Key': '64741dc238msh07ee6473be5b210p16ddbajsn1ca94d169902',
+      'X-RapidAPI-Key': '13c7831628msh5863dc064ac246bp12d132jsn9912df302347',
       'X-RapidAPI-Host': 'restaurants-near-me-usa.p.rapidapi.com'
     }
   };
@@ -93,14 +93,13 @@ async function restaurantName(){
   for (let i = 0; i < 6; i++) {
     var resName = searchRestaurants.restaurants[i].restaurantName
     var cuisineType = searchRestaurants.restaurants[i].cuisineType
-    console.log(searchRestaurants.restaurants[i].restaurantName)
+    var resSite = searchRestaurants.restaurants[i].website
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
     var resDesc = document.getElementById("d" + i)
     resDesc.textContent = cuisineType
-  // resDesc.link= searchRestaurants.restaurants[i].website
-  document.getElementById("L" +i).href= searchRestaurants.restaurants[i].website
-
+    resDesc.link= searchRestaurants.restaurants[i].website
+    document.getElementById("L" + i).href= searchRestaurants.restaurants[i].website
   }
 }
 
@@ -109,6 +108,6 @@ searchButton.addEventListener("click", function(event){
   event.preventDefault()
 getOpenWeather(cityName.value,stateEl.value.split(",")[1]) 
 restaurantName()
-// searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
+//searchRestaurantStateCity(cityName.value, stateEl.value.split(",")[0])
 restaurantSectionEl.setAttribute("class","")
 })
