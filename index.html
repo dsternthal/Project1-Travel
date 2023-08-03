@@ -59,14 +59,14 @@
                     <form class="uk-search uk-search-default pos: top-right">
                         <div href="" uk-search-icon></div>
                         <form action="" id="submit"><input class="uk-search-input" value="" type="text" placeholder="Miami" aria-label="Search">
-                        <div class="recentSearch">
-                            <h6>Recent Search</h6>
-                            <div class="recentList">
-                                <div class="recentItem">
+                        <!-- <div class="recentSearch">
+                            <h6>Recent Search</h6> -->
+                            <!-- <div class="recentList">
+                                 <div class="recentItem">
                                     <p>Miami</p>
-                                </div>
-                            </div>
-                        </div>
+                                </div> 
+                            </div>  -->
+                        <!-- </div> -->
                         <select name="states" id="states">
                             <!-- <option value>STATE</option> -->
                             <!-- Add placeholder STATE, so Alabama is not showing up always -->
@@ -221,6 +221,14 @@
 
 </body>
 <footer> 
+    <section>
+        <h3 id="topSearch">Recently Searched</h3>
+        <ul class="recentSearch">
+            <li id="top0"></li>
+            <li id="top1"></li>
+            <li id="top2"></li>
+        </ul>
+    </section>
     <h3 class="contact-title">Contact Us</h3>
     <section class="section-container">
         <ul>
