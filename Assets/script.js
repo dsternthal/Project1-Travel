@@ -3,6 +3,11 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
+
+var recentSearch = document.getElementById("submit").value
+
+
+
 // var recentListEl = document.querySelector(".recentList")
 // var inputSubmit = document.getElementById("submit")
 
@@ -103,6 +108,15 @@ async function restaurantName(){
   }
 }
 
+function searchHistory(){
+var recentSearch = localStorage.getItem("submit")
+localStorage.setItem("submit", recentSearch)
+
+// for (let i = 0; i < 3; i++) {
+// var top = document.getElementById("top"+i)
+  var top = document.getElementById("top0")
+  top.textContent = recentSearch
+}
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault()

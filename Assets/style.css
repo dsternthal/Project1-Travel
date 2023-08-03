@@ -88,9 +88,7 @@ box-shadow: 2px 2px 5px white;
   padding: 5px;
 }
 
-.uk-search input, .recentSearch{
-  display: block;
-}
+
 
 .recentSearch h6{
   font-style: italic;

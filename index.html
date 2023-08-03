@@ -59,14 +59,7 @@
                     <form class="uk-search uk-search-default pos: top-right">
                         <div href="" uk-search-icon></div>
                         <form action="" id="submit"><input class="uk-search-input" value="" type="text" placeholder="Miami" aria-label="Search">
-                        <div class="recentSearch">
-                            <h6>Recent Search</h6>
-                            <div class="recentList">
-                                <div class="recentItem">
-                                    <p>Miami</p>
-                                </div>
-                            </div>
-                        </div>
+                       
                         <select name="states" id="states">
                             <!-- <option value>STATE</option> -->
                             <!-- Add placeholder STATE, so Alabama is not showing up always -->
@@ -218,7 +211,18 @@
             ({ key: "AIzaSyATcRbM9Vy7XbUsu5UpUGTk0uy8IHsrsKE", v: "weekly" });</script>
     <script type="module" src="./Assets/script.js"></script>
 
+
 </body>
+
+<section>
+    <h3>Recent Search</h3>
+<ul class="recentSearch">
+    <li id="top0"></li>
+    <li id="top1"></li>
+    <li id="top2"></li>
+</ul>
+</section>
+
 <footer> 
     <h3 class="contact-title">Contact Us</h3>
     <section class="section-container">
@@ -227,8 +231,6 @@
             <li><a href=mailto:"info@SoFloFood.com" uk-icon="icon: mail; ratio: 3" aria-label="email-icon">EMAIL </a></li>
         </ul>
     </section>
-    
-
 
 </footer>
 </html>
