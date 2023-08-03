@@ -94,15 +94,12 @@ async function restaurantName(){
     var resName = searchRestaurants.restaurants[i].restaurantName
     var cuisineType = searchRestaurants.restaurants[i].cuisineType
     var resSite = searchRestaurants.restaurants[i].website
-    //var resLink = document.getElementById("link"+i)
-    // console.log(searchRestaurants.restaurants[i].restaurantName)
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
     var resDesc = document.getElementById("d" + i)
     resDesc.textContent = cuisineType
     resDesc.link= searchRestaurants.restaurants[i].website
     document.getElementById("L" + i).href= searchRestaurants.restaurants[i].website
-    // resLink.setAttribute("href",resSite)
   }
 }
 
