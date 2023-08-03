@@ -3,33 +3,19 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
+// bottom var+function is for local storage restaurants, till line 18
 var recentSearch = document.querySelector("#recentSearch")
-var topEl = document.getElementById(".top")
+var topSearchEl = document.getElementById("topSearch")
+
+topSearchEl.innerHTML = localStorage.getItem("recent", display)
+
+topSearchEl.addEventListener("recent", display)
 
 function display(){
   localStorage.setItem('recent', recentSearch.value)
   console.log(localStorage.getItem('recent'))
+  topSearchEl.innerHTML = localStorage.getItem("recent", display)
 }
-// var recentListEl = document.querySelector(".recentList")
-// var inputSubmit = document.getElementById("submit")
-
-// var recentSearch = []
-
-
-// inputSubmit.addEventListener("submit", function(event){
-// event.preventDefault();
-
-// recentSearch.unshift(cityName.value)
-// console.log(recentSearch)
-
-// var recentHtmlList = ""
-
-// for (let i = 0; i < recentSearch.length; i++) {
-//   recentHtmlList += recentSearch[i]
-// }
-
-// recentListEl.innerHTML = recentHtmlList
-// })
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
@@ -105,7 +91,7 @@ async function restaurantName(){
     cardEl.textContent = resName
     var resDesc = document.getElementById("d" + i)
     resDesc.textContent = cuisineType
-    resDesc.link= searchRestaurants.restaurants[i].website
+    // resDesc.link= searchRestaurants.restaurants[i].website
     document.getElementById("L" + i).href= searchRestaurants.restaurants[i].website
   }
 }
