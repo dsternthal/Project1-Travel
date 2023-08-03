@@ -122,6 +122,7 @@ box-shadow: 2px 2px 5px white;
   background-color: #9CB9D8;
   border-radius: 20px;
   text-align: center;
+  color:black
 }
 
 
@@ -141,7 +142,8 @@ box-shadow: 2px 2px 5px white;
   color:white;
 }
 
-#topSearch , #top0 , #top1 , #top2{
+
+#top0 , #top1 , #top2{
   color:black
 }
   
