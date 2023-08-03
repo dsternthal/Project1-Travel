@@ -12,6 +12,10 @@
   --LightRed: #fe6d73;
 }
 
+input:hover{
+  display: block;
+}
+
 .hidden {
   display: none;
 }
@@ -79,7 +83,7 @@ figure {
 }
 
 .recentSearch {
-  position: absolute;
+  
   height: 100px;
   top: 40px;
   background-color: white;
@@ -89,17 +93,17 @@ figure {
   padding: 5px;
 }
 
-.uk-search input,
+/* .uk-search input,
 .recentSearch {
   display: block;
-}
-
+} */
+/* 
 .recentSearch h6 {
   font-style: italic;
   font-size: 15px;
   margin-top: 0;
   margin-bottom: 0;
-}
+} */
 
 .recentItem {
   display: flex;

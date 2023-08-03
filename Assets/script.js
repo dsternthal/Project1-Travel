@@ -3,6 +3,13 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
+var recentSearch = document.querySelector("#recentSearch")
+var topEl = document.getElementById(".top")
+
+function display(){
+  localStorage.setItem('recent', recentSearch.value)
+  console.log(localStorage.getItem('recent'))
+}
 // var recentListEl = document.querySelector(".recentList")
 // var inputSubmit = document.getElementById("submit")
 
