@@ -3,26 +3,18 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
-// var recentListEl = document.querySelector(".recentList")
-// var inputSubmit = document.getElementById("submit")
+var recentSearch = document.querySelector("#recentSearch")
+var topSearchEl = document.getElementById("topSearch")
 
-// var recentSearch = []
+topSearchEl.innerHTML = localStorage.getItem("recent", display)
 
+topSearchEl.addEventListener("recent", display)
 
-// inputSubmit.addEventListener("submit", function(event){
-// event.preventDefault();
-
-// recentSearch.unshift(cityName.value)
-// console.log(recentSearch)
-
-// var recentHtmlList = ""
-
-// for (let i = 0; i < recentSearch.length; i++) {
-//   recentHtmlList += recentSearch[i]
-// }
-
-// recentListEl.innerHTML = recentHtmlList
-// })
+function display(){
+  localStorage.setItem('recent', recentSearch.value)
+  console.log(localStorage.getItem('recent'))
+  topSearchEl.innerHTML = localStorage.getItem("recent", display)
+}
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
