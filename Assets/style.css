@@ -143,20 +143,15 @@ figure {
   width: 100%;
 }
 
-#R0,
-#R1,
-#R2,
-#R3,
-#R4,
-#R5 {
-  font-family: 'Oooh Baby', cursive;
+.card { font-family: 'Oooh Baby', cursive;
   background-color: #9CB9D8;
   border-radius: 20px;
-  color: white;
+  color: white;}
+ 
+#R0, #R1, #R2, #R3, #R4, #R5{
+  color:white;
 }
-
-
-
+  
 /* created this id for the business name */
 #name {
   /* justify-content: left; */
