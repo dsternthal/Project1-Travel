@@ -3,8 +3,6 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
-<<<<<<< HEAD
-=======
 // var recentListEl = document.querySelector(".recentList")
 // var inputSubmit = document.getElementById("submit")
 
@@ -25,7 +23,6 @@ var restaurantSectionEl = document.querySelector("#restaurantSection")
 
 // recentListEl.innerHTML = recentHtmlList
 // })
->>>>>>> e34a56fe3a447e57e897da248b25630e0842fb27
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
