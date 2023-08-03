@@ -93,7 +93,8 @@ async function restaurantName(){
   for (let i = 0; i < 6; i++) {
     var resName = searchRestaurants.restaurants[i].restaurantName
     var cuisineType = searchRestaurants.restaurants[i].cuisineType
-    console.log(searchRestaurants.restaurants[i].restaurantName)
+    var resSite = searchRestaurants.restaurants[i].website
+    // console.log(searchRestaurants.restaurants[i].restaurantName)
     var cardEl = document.getElementById("R" + i)
     cardEl.textContent = resName
     var resDesc = document.getElementById("d" + i)
@@ -101,6 +102,8 @@ async function restaurantName(){
   // resDesc.link= searchRestaurants.restaurants[i].website
   document.getElementById("L" +i).href= searchRestaurants.restaurants[i].website
 
+    var resLink = getElementById("link"+i)
+    resLink.setAttribute("href",resSite)
   }
 }
 
