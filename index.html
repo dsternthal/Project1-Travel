@@ -27,17 +27,55 @@
 <figure></figure>
 
 <body>
+    <h3 id="topSearch" class="contact-title">Recently Searched</h3>
+    <section>
+        <ul class="recentSearch">
+            <li id="top0"></li>
+            <li id="top1"></li>
+            <li id="top2"></li>
+        </ul>
+    </section>
     <header class="uk-flex">
 
         <nav uk-dropnav class="navbar">
             <ul class="uk-subnav">
                 <h1 id="name">SoFlo Food</h1>
-            
-                <form class="uk-search uk-search-default pos: top-right">
-                    <div href="" uk-search-icon></div>
-                    <form action="" id="submit"><input class="uk-search-input" value="" type="text" placeholder="Miami"
-                            aria-label="Search">
-
+                <!--<li class="uk-active"><a href="#"> Home</a></li>
+                  <li>   (we do not need these in NAV bar anymore)
+                    <a href="#">Cuisine<span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li><a href="#">Latino</a></li>
+                            <li><a href="#">Asian</a></li>
+                            <li><a href="#">Indian</a></li>
+                            <li><a href="#">Italian</a></li>
+                            <li><a href="#">Fusion</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Ambiance<span uk-drop-parent-icon></span></a>
+                    <div class="uk-dropdown">
+                        <ul class="uk-nav uk-dropdown-nav">
+                            <li><a href="#">Kid Friendly</a></li>
+                            <li><a href="#">Classy</a></li>
+                            <li><a href="#">Trendy</a></li>
+                            <li><a href="#">Fast Casual</a></li>
+                        </ul>
+                    </div> -->
+                <li><a href="#"></a></li>
+                <li>
+                    <form class="uk-search uk-search-default pos: top-right">
+                        <div href="" uk-search-icon></div>
+                        <form action="" id="submit"><input class="uk-search-input" value="" type="text" placeholder="Miami" aria-label="Search">
+                        <div class="recentSearch">
+                            <h6>Recent Search</h6>
+                            <div class="recentList">
+                                <div class="recentItem">
+                                    <p>Miami</p>
+                                </div>
+                            </div>
+                        </div>
                         <select name="states" id="states">
                             <!-- <option value>STATE</option> 
                              Add placeholder STATE, so Alabama is not showing up always -->
@@ -178,12 +216,31 @@
         </main>
     </section>
 
+
+
+    <!-- <div class="uk-column-1-2 uk-column-divider">
+        <p>Come to miami, we have the food in all the land.</p>
+
+        <p>Duis aute irure aslkdfjkl;jafdsjkl;fsd in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+            est laborum.</p> -->
+
     </div>
     <!-- Open Weather API -->
     <title>Simple Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <div id="map"></div>
+    <footer> 
 
+        <h3 class="contact-title">Contact Us</h3>
+        <section class="section-container">
+            <ul>
+                <li><a href="tel:305-123-4567" uk-icon="icon: receiver; ratio: 3" aria-label="phone-icon">CALL </a></li>
+                <li><a href=mailto:"info@SoFloFood.com" uk-icon="icon: mail; ratio: 3" aria-label="email-icon">EMAIL </a></li>
+            </ul>
+        </section>
+    
+    </footer>
     <!-- Google Maps API -->
     <!-- prettier-ignore -->
     <script>(g => { var h, a, k, p = "The Google Maps JavaScript API", c = "google", l = "importLibrary", q = "__ib__", m = document, b = window; b = b[c] || (b[c] = {}); var d = b.maps || (b.maps = {}), r = new Set, e = new URLSearchParams, u = () => h || (h = new Promise(async (f, n) => { await (a = m.createElement("script")); e.set("libraries", [...r] + ""); for (k in g) e.set(k.replace(/[A-Z]/g, t => "_" + t[0].toLowerCase()), g[k]); e.set("callback", c + ".maps." + q); a.src = `https://maps.${c}apis.com/maps/api/js?` + e; d[q] = f; a.onerror = () => h = n(Error(p + " could not load.")); a.nonce = m.querySelector("script[nonce]")?.nonce || ""; m.head.append(a) })); d[l] ? console.warn(p + " only loads once. Ignoring:", g) : d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)) })
@@ -191,18 +248,16 @@
     <script type="module" src="./Assets/script.js"></script>
 
 </body>
-<footer>
+<footer> 
     <h3 class="contact-title">Contact Us</h3>
     <section class="section-container">
         <ul>
             <li><a href="tel:305-123-4567" uk-icon="icon: receiver; ratio: 3" aria-label="phone-icon">CALL </a></li>
-            <li><a href=mailto:"info@SoFloFood.com" uk-icon="icon: mail; ratio: 3" aria-label="email-icon">EMAIL </a>
-            </li>
+            <li><a href=mailto:"info@SoFloFood.com" uk-icon="icon: mail; ratio: 3" aria-label="email-icon">EMAIL </a></li>
         </ul>
     </section>
-
+    
 
 
 </footer>
-
 </html>

@@ -3,7 +3,6 @@ var cityName = document.querySelector(".uk-search-input")
 var searchButton = document.querySelector(".searchButton")
 var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
-// bottom var+function is for local storage restaurants, till line 18
 var recentSearch = document.querySelector("#recentSearch")
 var topSearchEl = document.getElementById("topSearch")
 
