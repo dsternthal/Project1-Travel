@@ -5,16 +5,15 @@ var stateEl = document.querySelector("#states")
 var restaurantSectionEl = document.querySelector("#restaurantSection")
 var recentSearch = document.querySelector("#recentSearch")
 var topSearchEl = document.getElementById("topSearch")
+var recentCity = []
 
-topSearchEl.innerHTML = localStorage.getItem("recent", display)
 
-topSearchEl.addEventListener("recent", display)
 
-function display(){
-  localStorage.setItem('recent', recentSearch.value)
-  console.log(localStorage.getItem('recent'))
-  topSearchEl.innerHTML = localStorage.getItem("recent", display)
-}
+// function display(){
+//   localStorage.setItem('recent', recentSearch.value)
+//   console.log(localStorage.getItem('recent'))
+//   topSearchEl.innerHTML = localStorage.getItem("recent", display)
+// }
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
@@ -93,8 +92,38 @@ async function restaurantName(){
     resDesc.link= searchRestaurants.restaurants[i].website
     document.getElementById("L" + i).href= searchRestaurants.restaurants[i].website
   }
+var searchedCity = {
+  name: cityName.value,
+  state: stateEl.value.split(",")[0]
+}
+if (recentCity>=3) {
+  recentCity.shift()
+  recentCity.push(searchedCity)
+}
+else{
+  recentCity.push(searchedCity)
+}
+localStorage.setItem("pastSearch", JSON.stringify(searchedCity))
+getLocal()
 }
 
+async function getLocal(){
+var localStorageCity = JSON.parse(localStorage.getItem("pastSearch"))
+console.log(localStorageCity)
+if (!localStorageCity) {
+  recentCity=[]
+  return
+}
+console.log(recentCity)
+
+await recentCity.push(localStorageCity)
+for (let i = 0; i < recentCity.length; i++) {
+  var recentButtonEl = document.getElementById("top"+i)
+  recentButtonEl.textContent=recentCity[i].name
+}
+}
+
+getLocal()
 
 searchButton.addEventListener("click", function(event){
   event.preventDefault()

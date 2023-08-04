@@ -69,15 +69,8 @@ box-shadow: 2px 2px 5px white;
 }
 
 .recentSearch{
-  position: absolute;
-  height: 100px;
-  top: 40px;
-  background-color: white;
-  width: 82%;
-  display: none;
-  border: 1px solid black;
-  padding: 5px;
-}
+flex-direction: row;
+} 
 
 /* .uk-search input, .recentSearch{
   display: block;
