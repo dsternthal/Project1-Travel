@@ -64,24 +64,8 @@ figure {
   margin-left: 100%;
 }
 
-/* search box for city name */
-.uk-search input {
-  width: 300px;
-  height: 150px;
-  margin-left: 100%;
-
-}
-
- .recentSearch {
-  
-  height: 100px;
-  top: 40px;
-  background-color: white;
-  width: 100%;
-  display: none;
-  border: 1px solid black;
-  padding: 5px;
-  
+.recentSearch{
+flex-direction: row;
 } 
 
 /* .uk-search input, .recentSearch{
