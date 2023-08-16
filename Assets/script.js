@@ -10,11 +10,7 @@ var recentState
 
 
 
-// function display(){
-//   localStorage.setItem('recent', recentSearch.value)
-//   console.log(localStorage.getItem('recent'))
-//   topSearchEl.innerHTML = localStorage.getItem("recent", display)
-// }
+
 
 function getOpenWeather(cityName, state) {
   var apiKey = "43307f36c133c1b4d80feb3644b2ab3e"
